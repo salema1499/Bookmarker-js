@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@600&family=Work+Sans:ital,wght@0,700;1,300;1,500;1,700;1,800&family=Ysabeau+Infant:wght@200&display=swap" rel="stylesheet">
+
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:wght@600&family=Work+Sans:ital,wght@0,700;1,300;1,500;1,700;1,800&family=Ysabeau+Infant:wght@200&display=swap" rel="stylesheet">
+
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:wght@600&family=Righteous&family=Work+Sans:ital,wght@0,700;1,300;1,500;1,700;1,800&family=Ysabeau+Infant:wght@200&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="popa w-100" id="popa">
+            <div class="box w-50 mx-auto mt-5">
+             <h4 class="m-2">Site Name or Url is not valid, Please follow the rules below :</h4>
+            <p class="m-2"><span><i class="fa-regular fa-circle-right"></i></span> Site name must contain at least 3 characters
+            </p>
+            <p class="m-2"><span><i class="fa-regular fa-circle-right"></i></span> Site URL must be a valid one</p>
+            <div class=" btnok mx-auto">
+              <button class="btn w-25 mx-auto p-1 m-3" onclick="closepopa()">ok</button>
+           </div>
+        </div>
+        </div>
+        <div class="title p-2 text-center position-relative w-25 mx-auto">
+          
+             <h1 class=" m-2 fw-500 fs-50 lh-60 "> Bookmarker</h1>
+         
+           <div class="overlay"></div>
+           
+        </div>
+        <div id="dots" class="dots  container-fluid py-2 text-center fs-16 fw-400 lh-24">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                   ...................................................................................................................
+                </div>
+            </div>
+          
+    
+        </div>
+        <div class="titlebookfav m-1 text-center" >
+            <h3 ><span><i class="fa-solid fa-bookmark  fs-25 fw-bolder lh-30"></i></span> Bookmark your favorite sites <span><i class="fa-solid fa-bookmark"></i></span></h3>
+            
+        </div>
+
+        <div class="subject">
+            <div class="sitename m-2 p-2">
+                <label for="site" class="mb-1 fs-16 fw-600 lh-24 site"><span><i class="fa-solid fa-book-bookmark"></i></span> Site Name</label>
+                <input type="text" oninput="siteNamefun(this.value)" id="site" name="site" class="form-control" placeholder="Bookmark Name">
+            </div>
+            <div class="siteurl m-2 p-2">
+                <label for="url" class="mb-1 fs-16 fw-600 lh-24 url"><span><i class="fa-solid fa-link"></i></span> Site URL</label>
+                <input type="url" id="url" name="url" class="form-control" placeholder="Website URL">
+            </div>
+            <div class="text-center mx-auto p-1 m-2">
+                <button class="btn px-5 submit fw-400 lh-24 fs-16 " onclick="addBook()">Submit</button>
+            </div>
+            
+            
+        </div>
+        <div id="dots" class="dots  container-fluid py-2 text-center fs-16 fw-400 lh-24">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                   ...................................................................................................................
+                </div>
+            </div>
+    
+        </div>
+            
+        <table class="table w-100 text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>View</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody"> 
+                    
+            </tbody>
+        </table>
+      
+
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
